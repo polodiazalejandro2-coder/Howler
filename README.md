@@ -1,3 +1,3 @@
 # Howler
-Practicando un poco sobre como piratear xD
+Practicando un poco sobre como piratear
 Alejandro borracho gafas rotas
