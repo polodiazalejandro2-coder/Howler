@@ -4,15 +4,15 @@
     "title": "Jeshua MATRIX",
     "artist": "jEshUA ",
     "genre": "meme :v",
-    "src": "assets/audio/sound1.mp3",
-    "cover": "assets/images/jeshua-matrix-song.png"
+    "src": "/assets/music/sound1.mp3",
+    "cover": "/assets/images/jeshua-matrix-song.png"
   },
   {
     "id": 2,
     "title": "Roxanne",
     "artist": "The Police",
     "genre": "Rock",
-    "src": "assets/audio/sound2.mp3",
-    "cover": "assets/images/roxanne.png"
+    "src": "/assets/music/sound2.mp3",
+    "cover": "/assets/images/roxanne.png"
   }
 ]
