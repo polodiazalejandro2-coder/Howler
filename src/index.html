@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify BAMBA</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="howler.js"></script>
 </head>
+
 <body>
 
     <div class="app-container">
@@ -40,7 +42,8 @@
                 <div id="songs-container" class="songs-grid">
                     <div class="song-card" data-id="1">
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&auto=format&fit=crop" alt="Cover">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&auto=format&fit=crop"
+                                alt="Cover">
                             <button class="play-btn-card"><i class="fa-solid fa-play"></i></button>
                         </div>
                         <h3>Título del Tema</h3>
@@ -49,7 +52,8 @@
 
                     <div class="song-card" data-id="2">
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop" alt="Cover">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop"
+                                alt="Cover">
                             <button class="play-btn-card"><i class="fa-solid fa-play"></i></button>
                         </div>
                         <h3>Rolón Underground</h3>
@@ -62,7 +66,9 @@
 
         <footer class="player-footer">
             <div class="current-track-info">
-                <img id="current-cover" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=100&auto=format&fit=crop" alt="Current Cover">
+                <img id="current-cover"
+                    src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=100&auto=format&fit=crop"
+                    alt="Current Cover">
                 <div class="track-text">
                     <h4 id="current-title">Selecciona una rola</h4>
                     <p id="current-artist">-</p>
@@ -78,7 +84,7 @@
                     <button id="next-btn"><i class="fa-solid fa-forward-step"></i></button>
                     <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
                 </div>
-                
+
                 <div class="progress-container">
                     <span id="current-time">0:00</span>
                     <input type="range" id="progress-bar" value="0" min="0" max="100">
@@ -95,4 +101,5 @@
     </div>
 
 </body>
+
 </html>
