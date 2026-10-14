@@ -40,28 +40,6 @@ body {
     color: #ff4757; /* Toque "pirata/rebelde" rojizo */
     margin-bottom: 30px;
 }
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #9ba1a6;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 600;
-    transition: color 0.2s;
-}
-
-.nav-links li.active a, .nav-links li a:hover {
-    color: #ffffff;
-}
-
 /* Main Content */
 .main-content {
     grid-area: main;
