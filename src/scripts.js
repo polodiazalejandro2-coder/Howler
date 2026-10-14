@@ -37,6 +37,11 @@ function playSong(index) {
     const song = songs[index];
     if (!song) return;
 
+    if (typeof Howl !== 'function' || !Howler) {
+        console.error('No se puede reproducir la canción: Howler.js no está disponible.');
+        return;
+    }
+
     if (currentSound) {
         currentSound.stop();
         currentSound.unload();
@@ -70,7 +75,7 @@ function playSong(index) {
 
 async function cargarCanciones() {
     try {
-        const response = await fetch('/data/musica.json');
+        const response = await fetch('../data/musica.json');
 
         if (!response.ok) {
             throw new Error(`Error HTTP ${response.status} al cargar musica.json`);
@@ -151,9 +156,9 @@ repeatButton.addEventListener('click', () => {
 });
 
 volumeBar.addEventListener('input', () => {
-    Howler.volume(Number(volumeBar.value) / 100);
+    if (Howler) Howler.volume(Number(volumeBar.value) / 100);
 });
 
-Howler.volume(Number(volumeBar.value) / 100);
+if (Howler) Howler.volume(Number(volumeBar.value) / 100);
 setPlayButton(false);
 cargarCanciones();
