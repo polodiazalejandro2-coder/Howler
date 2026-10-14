@@ -4,15 +4,39 @@
     "title": "Jeshua MATRIX",
     "artist": "jEshUA ",
     "genre": "meme :v",
-    "src": "/assets/music/sound1.mp3",
-    "cover": "/assets/images/jeshua-matrix-song.png"
+    "src": "/assets/music/MatrixLoop.mp3",
+    "cover": "/assets/images/matrixloop.png"
   },
   {
     "id": 2,
     "title": "Roxanne",
     "artist": "The Police",
     "genre": "Rock",
-    "src": "/assets/music/sound2.mp3",
-    "cover": "/assets/images/roxanne.png"
+    "src": "/assets/music/Roxanne-ThePolice.mp3",
+    "cover": "/assets/images/thepolice.png"
+  },
+  {
+    "id": 3,
+    "title": "Lose Yourself to Dance",
+    "artist": "Daft Punk",
+    "genre": "House",
+    "src": "/assets/music/DaftPunk-LoseYourselftoDance.mp3",
+    "cover": "/assets/images/daftpunk.png"
+  },
+  {
+    "id": 4,
+    "title": "Who Can It Be Now",
+    "artist": "Men At Work",
+    "genre": "Rock",
+    "src": "/assets/music/MenAtWork-WhoCanItBeNow.mp3",
+    "cover": "/assets/images/menatwork.png"
+  },
+  {
+    "id": 5,
+    "title": "P.Y.T",
+    "artist": "Michael Jackson",
+    "genre": "Pop",
+    "src": "/assets/music/MichaelJackson-P.Y.T.mp3",
+    "cover": "/assets/images/michaeljackson.png"
   }
 ]
