@@ -11,66 +11,33 @@
 </head>
 
 <body>
-
     <div class="app-container">
-
-        <aside class="sidebar">
-            <div class="logo">
-                <i class="fa-solid fa-skull-crossbones"></i>
-                <span>Spotify BAMBA</span>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <header class="top-bar">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="search-input" placeholder="¿Qué quieres reproducir o piratear?">
-                </div>
-                <div class="user-profile">
-                    <i class="fa-solid fa-user-pirate"></i>
-                    <span>Alejandroborrachogafasrotas</span>
-                </div>
-            </header>
-
-            <section class="content-body">
-                <h2>Rolas Crackeadas</h2>
-                <div id="songs-container" class="songs-grid"></div>
-            </section>
+        <section class="content-body">
+            <h2>Rolas Crackeadas</h2>
+            <div id="songs-container" class="songs-grid"></div>
+        </section>
         </main>
 
-        <footer class="player-footer">
-            <div class="current-track-info">
-                <img id="current-cover"
-                    src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=100&auto=format&fit=crop"
-                    alt="Current Cover">
-                <div class="track-text">
-                    <h4 id="current-title">Selecciona una rola</h4>
-                    <p id="current-artist">-</p>
-                </div>
-                <i class="fa-regular fa-heart like-btn"></i>
+        <div class="player-controls-center">
+            <div class="control-buttons">
+                <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
+                <button id="prev-btn"><i class="fa-solid fa-backward-step"></i></button>
+                <button id="play-pause-btn" class="main-play"><i class="fa-solid fa-play"></i></button>
+                <button id="next-btn"><i class="fa-solid fa-forward-step"></i></button>
+                <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
             </div>
 
-            <div class="player-controls-center">
-                <div class="control-buttons">
-                    <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
-                    <button id="prev-btn"><i class="fa-solid fa-backward-step"></i></button>
-                    <button id="play-pause-btn" class="main-play"><i class="fa-solid fa-play"></i></button>
-                    <button id="next-btn"><i class="fa-solid fa-forward-step"></i></button>
-                    <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
-                </div>
-
-                <div class="progress-container">
-                    <span id="current-time">0:00</span>
-                    <input type="range" id="progress-bar" value="0" min="0" max="100">
-                    <span id="total-duration">0:00</span>
-                </div>
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <span id="total-duration">0:00</span>
             </div>
+        </div>
 
-            <div class="player-extra">
-                <i class="fa-solid fa-volume-high"></i>
-                <input type="range" id="volume-bar" value="80" min="0" max="100">
-            </div>
+        <div class="player-extra">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range" id="volume-bar" value="80" min="0" max="100">
+        </div>
         </footer>
 
     </div>

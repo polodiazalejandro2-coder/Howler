@@ -10,63 +10,27 @@ body {
     color: #e1e1e6;
     height: 100vh;
     overflow: hidden;
-}
-
-/* Estructura Principal Grid */
-.app-container {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    grid-template-rows: 1fr 90px;
-    grid-template-areas: 
-        "sidebar main"
-        "footer footer";
-    height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-    grid-area: sidebar;
-    background-color: rgba(5, 5, 7, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-right: 1px solid rgba(26, 26, 32, 0.6);
-    z-index: 10;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ff4757;
-    margin-bottom: 30px;
-}
-
-/* Main Content - Fondo vacío alineado a la derecha */
-.main-content {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end; /* Alinea la playlist a la derecha */
-    background: transparent; /* Vacío para Three.js */
-    overflow-y: auto;
     position: relative;
+}
+
+/* Contenedor Principal (Pantalla completa transparente para Three.js) */
+.app-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Mantiene la playlist a la derecha */
+    align-items: flex-start;
     padding: 30px;
 }
 
-/* Eliminamos la barra superior (top-bar) y buscador para dejar el fondo limpio */
-.top-bar, .search-box, .user-profile {
-    display: none;
-}
-
-/* Content Body Adaptado */
+/* Playlist de canciones flotante a la derecha */
 .content-body {
-    width: 340px; /* Ancho compacto para el lado derecho */
-    max-height: calc(100vh - 150px);
+    width: 340px;
+    max-height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
 .content-body h2 {
@@ -76,7 +40,7 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Playlist de canciones en filas pequeñas a la derecha estilo elegante */
+/* Listado de canciones en filas compactas */
 .songs-grid {
     display: flex;
     flex-direction: column;
@@ -111,7 +75,6 @@ body {
     border-radius: 6px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 0;
     margin-right: 12px;
 }
 
@@ -155,63 +118,24 @@ body {
     color: #9ba1a6;
 }
 
-/* Reproductor Footer con fondo transparente */
-.player-footer {
-    grid-area: footer;
-    background-color: rgba(5, 5, 7, 0.75);
-    backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(26, 26, 32, 0.6);
-    display: grid;
-    grid-template-columns: 300px 1fr 250px;
-    align-items: center;
-    padding: 0 20px;
-    gap: 20px;
-    z-index: 10;
-}
-
-.current-track-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-#current-cover {
-    width: 50px;
-    height: 50px;
-    border-radius: 6px;
-    object-fit: cover;
-}
-
-.track-text h4 {
-    font-size: 0.95rem;
-    color: #fff;
-}
-
-.track-text p {
-    font-size: 0.8rem;
-    color: #9ba1a6;
-}
-
-.like-btn {
-    color: #9ba1a6;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-left: 10px;
-}
-
-.like-btn:hover {
-    color: #ff4757;
-}
-
-/* Controles Centrales */
+/* Controles Centrales del Reproductor (Flotantes abajo) */
 .player-controls-center {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
+    width: 400px;
+    max-width: 90%;
+    background: rgba(5, 5, 7, 0.75);
+    backdrop-filter: blur(12px);
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(26, 26, 32, 0.6);
+    z-index: 10;
 }
 
 .control-buttons {
@@ -248,4 +172,45 @@ body {
 
 .control-buttons .main-play:hover {
     transform: scale(1.05);
-    color: #0s
+    color: #000;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 0.75rem;
+    color: #9ba1a6;
+}
+
+.progress-container input[type="range"] {
+    flex: 1;
+    accent-color: #ff4757;
+    cursor: pointer;
+    height: 4px;
+}
+
+/* Extras (Volumen flotante abajo a la derecha) */
+.player-extra {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9ba1a6;
+    background: rgba(5, 5, 7, 0.75);
+    backdrop-filter: blur(12px);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(26, 26, 32, 0.6);
+    z-index: 10;
+}
+
+.player-extra input[type="range"] {
+    width: 90px;
+    accent-color: #ff4757;
+    cursor: pointer;
+    height: 4px;
+}
